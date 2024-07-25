@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 16px;
+    height: 100vh;
+    width: 100%;
+    background: url(images/bg-pattern-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+
+}
+
+.container {
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 5rem;
+    margin: 0 auto;
+    position: relative;
+
+
+}
+
+.container .image  {
+    margin-bottom: 5rem;
+}
+
+.container .image img {
+    width: auto;
+}
+
+.container .announcement-text {
+    font-size: 5rem;
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
+    font-weight: bold;
+    color: hsl(0, 6%, 24%);
+    letter-spacing: 0.7rem;
+    line-height: 5rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.container .announcement-text span {
+    color: hsl(0, 36%, 70%);
+    font-weight: 300;
+}
+
+.container .introduction-text {
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans';
+    line-height: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+
+}
+
+.container .my-form {
+    width: 100%;
+    position: relative;
+    overflow:visible;
+
+}
+
+.container .my-form .my-email {
+    width: 100%;
+    padding: 1.5rem;
+    border: 1px solid hsl(0, 36%, 70%);
+    border-radius: 2rem;
+    outline: none;
+    height: 100%
+}
+
+.my-form .active {
+    width: 100%;
+    padding: 1.5rem;
+    border: 2.5px solid hsl(0, 93%, 68%);
+    border-radius: 2rem;
+    outline: none;
+    height: 100%;
+
+
+}
+
+.container .my-form input::placeholder {
+    color: hsl(0, 36%, 70%);
+    font-family: 'Josefin Sans';
+    font-size: 1rem;
+}
+
+.container .my-form input[type=text] {
+    font-family: 'Josefin Sans';
+    font-size: 1rem;
+    color:hsl(0, 6%, 24%)
+}
+
+.container .my-form .icon-error {
+    width: 5%;
+    position: absolute;
+    right: 8.5rem;
+    bottom: 1.3rem
+}
+
+.container .my-form button {
+    width: 110px;
+    height: 100%;
+    position: absolute;
+    right: 0rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    outline: none;
+    border: none;
+    background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+    transition: all .5s ease-in-out;
+    
+    
+}
+
+.container .my-form button:hover {
+
+    box-shadow: -5px 5px 20px 5px hsl(0, 36%, 70%);
+    transform: scale(1);  
+    width: 100%;
+    background: hsl(0, 6%, 24%);
+}
+
+.valid-text {
+    color: hsl(0, 6%, 24%);
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+}
+
+.invalid-text {
+    color: hsl(0, 93%, 68%);
+    font-weight: bold;
+    font-family: 'Josefin Sans';
+}
+
+.image-container {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container .img {
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.image-container-2 {
+    display: none;
+}
+
+@media screen and (max-width: 765px) {
+
+    * {
+
+    }
+
+    main {
+        flex-direction: column;
+        
+    }
+
+    .container {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .container .image {
+        margin: 0.5rem;
+        padding: 0.5rem;
+    }
+
+    .container .image img {
+        width: 25%;
+    }
+
+    .container .announcement-text {
+        text-align: center;
+        font-size: 2rem;
+        line-height: 2.3rem;
+        margin: 0;
+    }
+
+    .container .introduction-text {
+        margin: 0;
+        font-size: 0.9rem;
+        text-align: center;
+        margin: 0.5rem 2rem;
+        letter-spacing: normal;
+        line-height: 1.5rem;
+    }
+    
+
+    .image-container {
+        display: none;
+    }
+
+    .image-container-2 {
+        display: block;
+        width: 100%;
+    }
+
+    .image-container-2 {
+        width: 100%;
+        margin-bottom: 2rem;
+        height: auto;
+    }
+
+    .image-container-2 img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .container .my-form {
+        padding: 0 2rem ;
+    }
+    .container .my-form .my-email, .container .my-form .active {
+        height: 10px;
+    }
+
+    .container .my-form .my-btn {
+        right: 2rem;
+        width: 60px;
+    }
+
+    .container .validation-text {
+        text-align: center;
+        font-size: 0.8rem;
+    }
+}
+
